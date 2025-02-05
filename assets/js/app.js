@@ -58,12 +58,12 @@ const templatingblog = (arr) => {
             <div class="card-body">
               <p>
               ${card.body}
-              </p>
+              </p> </div>
               <div class="card-footer d-flex justify-content-between">
-                <button class="btn btn-sm btn-info"onclick="editonclick(this)">Edit</button>
-                <button class="btn btn-sm btn-danger"onclick="removeonclick(this)">Remove</button>
-              </div>
+              <button class="btn btn-sm btn-outline-info" onclick="editonclick(this)">Edit</button>
+              <button class="btn btn-sm btn-outline-danger" onclick="removeonclick(this)">Remove</button>
             </div>
+            
           </div>
     `;
     BlogContainer.innerHTML = result;
@@ -85,10 +85,12 @@ const createCard = (obj, Response) => {
               <p>
               ${obj.body}
               </p>
+             </div>
               <div class="card-footer d-flex justify-content-between">
-                <button class="btn btn-sm btn-info"onclick="editonclick(this)">Edit</button>
-                <button class="btn btn-sm btn-danger"onclick="removeonclick(this)">Remove</button>
-              </div>
+              <button class="btn btn-sm btn-outline-info" onclick="editonclick(this)">Edit</button>
+              <button class="btn btn-sm btn-outline-danger" onclick="removeonclick(this)">Remove</button>
+            </div>
+
             </div>
   
   `;
