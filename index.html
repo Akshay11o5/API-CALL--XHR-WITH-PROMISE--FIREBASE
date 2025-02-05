@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API call with promise -firebase</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row mb-5">
+        <div class="col-md-6 offset-md-3">
+          <div class="card">
+            <div class="card-body">
+              <form id="blogForm">
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" class="form-control" id="title" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="content">Content</label>
+                  <textarea
+                    class="form-control"
+                    id="content"
+                    rows="8"
+                    required
+                  ></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="userid">UserId</label>
+                  <select class="form-control" id="userid">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+
+                <button
+                  type="submit"
+                  class="btn btn-sm btn-block btn-primary"
+                  id="submitbtn"
+                >
+                  Add Post
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-sm btn-block btn-primary d-none"
+                  id="updatebtn"
+                >
+                  Update
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div
+          class="col-md-6 offset-md-3 d-flex flex-column-reverse"
+          id="BlogContainer"
+        >
+          <!-- <div class="card-mb-4" id="">
+            <div class="card-header">
+              <h3 class="m-0">akshay</h3>
+            </div>
+
+            <div class="card-body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deserunt maxime sint repudiandae aperiam iste ea? Rerum, impedit
+                quis cumque exercitationem, nesciunt quaerat autem at est nulla
+                laudantium maxime, rem consequuntur!
+              </p>
+
+              <div class="card-footer d-flex justify-content-between">
+                <button class="btn btn-sm btn-info">Edit</button>
+                <button class="btn btn-sm btn-danger">Remove</button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="loader d-none" id="loader">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
